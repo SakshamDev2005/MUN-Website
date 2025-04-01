@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" type="image/x-icon" href="IDS-MUN/logo.jpg">
+        <title>IDS MUN</title>
+        <link rel="stylesheet" href="IDS-MUN/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                const menuToggle = document.querySelector('.toggle'); // Select the toggle button
+                const nav = document.querySelector('.NAV2'); // Select the NAV2 element
+                let isTransitioning = false; // Prevent rapid toggling
+
+                menuToggle.addEventListener('click', function () {
+                    if (isTransitioning) return; // Ignore clicks during transition
+                    isTransitioning = true;
+
+                    // Toggle the 'active' class to open/close the menu
+                    nav.classList.toggle('active');
+
+                    // Wait for the transition to complete before allowing another toggle
+                    setTimeout(() => {
+                        isTransitioning = false;
+                    }, 500); // Match the transition duration in CSS (0.5s)
+                });
+            });
+        </script>
+
+    <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            // Select all navigation links in both NAV and NAV2
+            const navLinks = document.querySelectorAll('nav .NAV ul li a, .NAV2 ul li a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault(); // Prevent default anchor behavior
+
+                    // Get the target section ID from the href attribute
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        // Calculate the position of the target element relative to the top of the page
+                        const targetPosition = targetElement.offsetTop;
+                   
+                        
+                        // Scroll smoothly to the target position
+                        window.scrollTo({
+                            top: targetPosition-150, // Scroll to the calculated position
+                            behavior: 'smooth' // Enable smooth scrolling
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+        <nav>
+          
+            <img src="IDS-MUN/logo-2" alt="Logo" class="Logo">
+            <div class="toggle">&#9776</div>
+            <div class="NAV">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#committee">Committee</a></li>
+                    <li><a href="#register">Register</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul> 
+            </div>
+
+        </nav>
+
+        <div class="NAV2">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#committee">Committee</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul> 
+        </div>
+
+        <div class="Home-Page" id="home">
+            <img src="IDS-MUN/download1.jpg" alt="Home-Page1">
+        </div>
+
+        <hr>
+
+        <div class="Committee" id="committee">
+            <h1 style="text-decoration: underline;">Committee</h1>
+            <div class="committee-cards">
+                <div class="card">
+                    <img src="https://cdn.britannica.com/16/190516-050-5942C013/meeting-United-Nations-Security-Council-2014.jpg?w=300" alt="UNSC">
+                    <h2>United Nations Security Council</h2>
+                    <p>Topic: The Situation in Afghanistan</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://www.globaltimes.cn/Portals/0/attachment/2022/2022-09-15/e4315c6a-300f-4212-83a6-447b18f16bce.jpeg" alt="UNHRC">
+                    <h2>United Nations Human Rights Council</h2>
+                    <p>Topic: Addressing the Human Rights Viol
+                </div>
+
+                <div class="card">
+                    <img src="https://u4d2z7k9.delivery.rocketcdn.me/wp-content/uploads/2021/07/24022884587_5f5dc3fb31_c.jpg" alt="UNEP">
+                    <h2>United Nations Environment Programme</h2>
+                    <p>Topic: Climate Change and Sustainable Development</p>
+                </div>
+
+                <div class="card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4tqtLBERC6zr6l7YERg9cuXzq3ECpsSppRw&s" alt="UNDP">
+                    <h2>United Nations Development Programme</h2>
+                    <p>Topic: Eradicating Poverty and Promoting Sustainable Development</p>
+                </div>
+                
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="Register" id="register">
+            <h1 style="text-decoration: underline;">Register</h1>
+           <h3>Coming Soon</h3> 
+        </div>
+
+        <hr>
+
+
+        <div class="About" id="about">
+            <h1 style="text-align: center; text-decoration: underline;">About Us</h1>
+
+            <p>
+                The Indian Diplomat Summit Model United Nations (IDS-MUN) is a premier debating
+                 and diplomacy platform that brings together young minds to engage in global issues, negotiate solutions, 
+                 and develop leadership skills. Organized by Yash Oswal, IDS MUN is committed to fostering
+                critical thinking, international awareness, and policy-driven discussions among students.
+                With a focus on realism and diplomatic excellence, IDS MUN simulates the workings of the United Nations, 
+                allowing delegates to represent nations, debate pressing global challenges, and collaborate on impactful resolutions. 
+                Whether you're a seasoned MUN participant or a first-time delegate, IDS MUN offers an enriching experience that
+                 sharpens your public speaking, negotiation, and problem-solving skills.
+                <br>Join us at IDS MUN and be part of a new generation of changemakers shaping the future of global diplomacy!
+            </p>
+           
+        </div>
+
+        <hr>
+        
+
+        <footer class="contact" id="contact">
+
+
+            <h2 style="text-decoration: underline;">Contact Us</h2>
+
+            <div class="Yash">
+                <h3>Yash Oswal </h3>
+                <h3>+91 8888655550</h3>
+            </div>
+
+            <div class="social">
+                    <a href="https://instagram.com/ids_mun_mumbai" target="_blank">Instagram</a>
+                    <a href="mailto:idsmun@example.com">idsmun@example.com</a>
+            </div>
+
+            
+            </div>
+
+        
+        </footer>
+    </body>
+</html>
